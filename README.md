@@ -12,6 +12,9 @@ This repository intents to be a compillation about data science resources and in
 
 ## Software
 
+* [Neural networks](software/neural-networks.md)
+* [Jupyter notebook](software/jupyter-notebook.md)
+
 ## Miscellaneous
 
 * [Free datascience books](resources/free-books.md)
