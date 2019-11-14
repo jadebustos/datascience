@@ -39,7 +39,7 @@ This procedure has been adapted from the Centos 7.4 installation:
 
 ## Installing OpenVino
 
-* Install openvino dependencies:
+* Install OpenVino dependencies:
 
 ```
 # cd /opt/intel/openvino/install_dependencies
@@ -64,7 +64,7 @@ Add third-party RPM Fusion repository and install FFmpeg package (y/n): y
 # yum install intel-openvino-model-optimizer
 ```
 
-* Create an user a give it sudo privileges:
+* Create an user and give it sudo privileges:
 
 ```
 # cat /etc/sudoers.d/jadebustos 
@@ -72,13 +72,13 @@ jadebustos	ALL = ( root ) NOPASSWD:ALL
 # 
 ```
 
-* Go to __cd /opt/intel/openvino/deployment_tools/model_optimizer/install_prerequisites/__ and make a backup of the file:
+* Go to __/opt/intel/openvino/deployment_tools/model_optimizer/install_prerequisites/__ and make a backup of the file:
 
 ```
 # cp install_prerequisites.sh install_prerequisites.sh.bck
 ```
 
-* To run in Red Hat Enterprise Linux you will need to modify the __install_prerequisites.sh** script it to consider RHEL as centos:
+* To run in Red Hat Enterprise Linux you will need to modify the __install_prerequisites.sh__ script it to consider RHEL as centos:
 
 ```
 if [[ -f /etc/centos-release ]]; then
