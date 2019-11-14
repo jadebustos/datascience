@@ -78,7 +78,7 @@ jadebustos	ALL = ( root ) NOPASSWD:ALL
 # cp install_prerequisites.sh install_prerequisites.sh.bck
 ```
 
-* To run in Red Hat Enterprise Linux you will need to modify the __install_prerequisites.sh__ script it to consider RHEL as centos:
+* To run the script in Red Hat Enterprise Linux you will need to modify the __install_prerequisites.sh__ script to consider RHEL as centos:
 
 ```
 if [[ -f /etc/centos-release ]]; then
