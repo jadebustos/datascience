@@ -29,7 +29,7 @@ This procedure has been adapted from the Centos 7.4 installation:
 
 * Download and install these RPMS:
 
-  * **freebidi** from RHN.
+  * **freebidi** from RHN or from [rpmfind](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/fribidi-1.0.2-1.el7.x86_64.rpm).
   * **lib64va1** from [rpmfind](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libva-1.8.3-1.el7.x86_64.rpm).
   * **lib64wayland-client0** from [rpmfind](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libwayland-client-1.15.0-1.el7.x86_64.rpm).
 
