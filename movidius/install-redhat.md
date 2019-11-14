@@ -1,11 +1,25 @@
-# Install on CentOS 7.7
+# Installing OpenVino toolkit on Red Hat Enterprise Linux 7.7
 
-> https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html
+This procedure has been adapted from the Centos 7.4 installation:
 
-* Install a RHEL 7.7
-* Set release to 7.7
-* Update
-* Follow [https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_yum.html](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_yum.html)
+* [https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html)
+* [https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_yum.html](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_yum.html)
+
+## Installing the host
+
+* Install a RHEL 7.7 (in my case in a Lenovo ThinkPad x240).
+* Set release to 7.7:
+
+```
+# subscription-manager release --set=7.7
+```
+* Update and reboot if necessary:
+
+```
+# yum update -y
+```
+* Follow [https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_yum.html](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_yum.html) to install OpenVino toolkit from Intel RPMs repository.
+
 * Configure EPEL:
 
 ```
@@ -13,15 +27,17 @@
 # yum install epel-release-latest-7.noarch.rpm
 ```
 
-* Download and install them:
+* Download and install these RPMS:
 
-  * **freebidi** from RHN
-  * **lib64va1** from [rpmfind](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libva-1.8.3-1.el7.x86_64.rpm)
-  * **lib64wayland-client0** from [rpmfind](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libwayland-client-1.15.0-1.el7.x86_64.rpm)
+  * **freebidi** from RHN.
+  * **lib64va1** from [rpmfind](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libva-1.8.3-1.el7.x86_64.rpm).
+  * **lib64wayland-client0** from [rpmfind](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libwayland-client-1.15.0-1.el7.x86_64.rpm).
 
 ```
-# yum install fribidi-1.0.2-1.el7.x86_64.rpm
+# yum install fribidi-1.0.2-1.el7.x86_64.rpm libva-1.8.3-1.el7.x86_64.rpm libwayland-client-1.15.0-1.el7.x86_64.rpm
 ```
+
+## Installing OpenVino
 
 * Install openvino dependencies:
 
@@ -40,12 +56,6 @@ Add third-party RPM Fusion repository and install FFmpeg package (y/n): y
 ```
 
 > NOTE: if needed [glibc-static for i686](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libstdc++-static-4.8.5-39.el7.i686.rpm), [glib-static for x86_64](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libstdc++-static-4.8.5-39.el7.x86_64.rpm), [libstdc++-static for i686](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libstdc++-static-4.8.5-39.el7.i686.rpm) and [libstdc++-static for x86_64](https://rpmfind.net/linux/centos/7.7.1908/os/x86_64/Packages/libstdc++-static-4.8.5-39.el7.x86_64.rpm).
-
-* Install:
-
-```
-# yum install intel-openvino-omz-tools intel-openvino-omz-dev intel-openvino-omz
-```
 
 ## Configure the model optimizer
 
