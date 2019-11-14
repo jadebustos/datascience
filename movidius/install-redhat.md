@@ -51,7 +51,6 @@ No package libstdc++-static available.
 ...
 Add third-party RPM Fusion repository and install FFmpeg package (y/n): y
 ...
-[root@neurotic install_dependencies]# 
 #
 ```
 
